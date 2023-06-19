@@ -27,7 +27,7 @@ doctype_js = {
 	"Contact": "public/js/contact.js",
 }
 
-override_doctype_class = {"Address": "erpnext.accounts.custom.address.ERPDoctorAddress"}
+override_doctype_class = {"Address": "erpnext.accounts.custom.address.ERPNextAddress"}
 
 override_whitelisted_methods = {
 	"frappe.www.contact.send_message": "erpnext.templates.utils.send_message"
@@ -556,7 +556,7 @@ user_privacy_documents = [
 	},
 ]
 
-# ERPDoctor doctypes for Global Search
+# ERPNext doctypes for Global Search
 global_search_doctypes = {
 	"Default": [
 		{"doctype": "Customer", "index": 0},
