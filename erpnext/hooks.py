@@ -1,13 +1,14 @@
-app_name = "erpnext"
-app_title = "ERPNext"
+# GPL NOTICE: Changes applied - renamed to ERPDoctor
+app_name = "erpdoctor"
+app_title = "ERPDoctor"
 app_publisher = "Frappe Technologies Pvt. Ltd."
 app_description = """ERP made simple"""
 app_icon = "fa fa-th"
 app_color = "#e74c3c"
 app_email = "info@erpnext.com"
 app_license = "GNU General Public License (v3)"
-source_link = "https://github.com/frappe/erpnext"
-app_logo_url = "/assets/erpnext/images/erpnext-logo.svg"
+source_link = "https://github.com/polzmann/erpnext"
+app_logo_url = "/assets/erpnext/images/erpnext-logo.png"
 
 
 develop_version = "14.x.x-develop"
@@ -26,7 +27,7 @@ doctype_js = {
 	"Contact": "public/js/contact.js",
 }
 
-override_doctype_class = {"Address": "erpnext.accounts.custom.address.ERPNextAddress"}
+override_doctype_class = {"Address": "erpnext.accounts.custom.address.ERPDoctorAddress"}
 
 override_whitelisted_methods = {
 	"frappe.www.contact.send_message": "erpnext.templates.utils.send_message"
@@ -429,13 +430,13 @@ scheduler_events = {
 	],
 }
 
-email_brand_image = "assets/erpnext/images/erpnext-logo.jpg"
+email_brand_image = "assets/erpnext/images/erpnext-logo.png"
 
 default_mail_footer = """
 	<span>
 		Sent via
 		<a class="text-muted" href="https://erpnext.com?source=via_email_footer" target="_blank">
-			ERPNext
+			ERPDoctor
 		</a>
 	</span>
 """
@@ -555,7 +556,7 @@ user_privacy_documents = [
 	},
 ]
 
-# ERPNext doctypes for Global Search
+# ERPDoctor doctypes for Global Search
 global_search_doctypes = {
 	"Default": [
 		{"doctype": "Customer", "index": 0},
