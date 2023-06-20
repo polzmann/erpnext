@@ -17,6 +17,26 @@
 
 </div>
 
+## Terrantic Build
+
+To build Terrantic's version of ERPNext (ERPDoctor), use the following command:
+
+```shell
+export APPS_JSON='[                                       
+  {
+    "url": "https://github.com/frappe/payments",
+    "branch": "version-14"
+  },
+  {
+    "url": "https://github.com/polzmann/erpnext",
+    "branch": "version-14"
+  }
+]'
+export APPS_JSON_BASE64=$(echo ${APPS_JSON} | base64 -w 0)
+docker build  --build-arg=PYTHON_VERSION=3.10.5 --build-arg=NODE_VERSION=16.18.0 --build-arg=ERPNEXT_REPO=https://github.com/polzmann/erpnext --build-arg=ERPNEXT_BRANCH=develop --build-arg=APPS_JSON_BASE64=$APPS_JSON_BASE64 --tag=<IMAGE_REPO>/erpnext:<VERSION>  --file=images/custom/Containerfile .
+```
+
+
 ERPNext as a monolith includes the following areas for managing businesses:
 
 1. [Accounting](https://erpnext.com/open-source-accounting)
