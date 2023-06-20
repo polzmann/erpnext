@@ -83,8 +83,8 @@ calendars = [
 website_generators = ["Item Group", "Website Item", "BOM", "Sales Partner"]
 
 website_context = {
-	"favicon": "/assets/erpnext/images/erpnext-favicon.svg",
-	"splash_image": "/assets/erpnext/images/erpnext-logo.svg",
+	"favicon": "/assets/erpnext/images/favicon-32x32.png",
+	"splash_image": "/assets/erpnext/images/erpnext-logo.png",
 }
 
 # nosemgrep
@@ -440,7 +440,7 @@ default_mail_footer = """
 	<span>
 		Sent via
 		<a class="text-muted" href="https://erpnext.com?source=via_email_footer" target="_blank">
-			ERPNext
+			ERPDoctor
 		</a>
 	</span>
 """

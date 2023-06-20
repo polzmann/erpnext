@@ -15,7 +15,7 @@ from erpnext.setup.doctype.incoterm.incoterm import create_incoterms
 from .default_success_action import get_default_success_action
 
 default_mail_footer = """<div style="padding: 7px; text-align: right; color: #888"><small>Sent via
-	<a style="color: #888" href="http://erpnext.org">ERPNext</a></div>"""
+	<a style="color: #888" href="http://terrantic.com">ERPDoctor</a></div>"""
 
 
 def after_install():
@@ -199,7 +199,7 @@ def add_standard_navbar_items():
 
 
 def add_app_name():
-	frappe.db.set_value("System Settings", None, "app_name", "ERPNext")
+	frappe.db.set_value("System Settings", None, "app_name", "ERPDoctor")
 
 
 def setup_log_settings():
